@@ -17,7 +17,7 @@ from libs.save_eval_state import save_analysis_state
 from libs.log_wandb import merge_and_upload
 
 # loading from the global libs for evaluation
-sys.path.insert(0, "../../libs")
+sys.path.insert(0, "../libs")
 from utils import process_rec_raw
 from metrics import evaluate_direct_match_truncate
 

@@ -10,12 +10,13 @@ from vllm import LLM, SamplingParams
 from datasets import load_from_disk
 
 # --- GRPO-specific analysis utilities ---
-from libs.analyze_grpo import find_latest_checkpoint, parse_log_history, plot_losses
+from libs.analyze_grpo import find_latest_checkpoint
+from libs.analyze import parse_log_history, plot_losses
 from libs.save_eval_state import save_analysis_state
 from libs.log_wandb import merge_and_upload
 
-# --- global libs for evaluation ---
-sys.path.insert(0, "../../libs")
+# loading from the global libs for evaluation
+sys.path.insert(0, "libs/")
 from utils import process_rec_raw
 from metrics import evaluate_direct_match_truncate
 
